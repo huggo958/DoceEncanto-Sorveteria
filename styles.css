@@ -118,3 +118,18 @@ body.motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0)}
   .category-card:hover{color:var(--red)}
 }
 @media(prefers-reduced-motion:reduce){.category-card img,.gallery-item img,.product-card{transition:none!important}}
+
+/* Use the Vilela artwork in place of the platform's green star emoji. */
+.vilela-symbol{position:relative;display:inline-grid;place-items:center;flex:0 0 auto;overflow:hidden;border-radius:50%;vertical-align:middle;background:var(--red)}
+.vilela-symbol img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;transform:scale(1.28)}
+.symbol-wordmark{width:30px;height:30px}
+.symbol-tiny{width:17px;height:17px;margin:0 7px;padding:0!important}
+.symbol-sticker{width:24px;height:24px;margin-top:5px}
+.hero-sunburst{width:48px;height:48px;font-size:0;color:transparent}
+.vilela-symbol.hero-sunburst{position:absolute}
+.ticker-track .symbol-ticker{width:20px;height:20px}
+.about-stamp .symbol-stamp{width:22px;height:22px;margin:3px auto 0}
+.footer-mark .symbol-wordmark{width:30px;height:30px}
+.hero-hours .vilela-symbol img{padding:0}
+.photo-sticker .symbol-sticker{padding:0;margin-top:5px}
+.ticker-track .vilela-symbol{font-family:inherit;letter-spacing:normal}

@@ -136,6 +136,21 @@ body.motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0)}
   .category-card:hover{color:var(--red)}
 }
 @media(prefers-reduced-motion:reduce){.category-card img,.gallery-item img,.product-card{transition:none!important}}
+
+/* Use the Vilela artwork in place of the platform's green star emoji. */
+.vilela-symbol{position:relative;display:inline-grid;place-items:center;flex:0 0 auto;overflow:hidden;border-radius:50%;vertical-align:middle;background:var(--red)}
+.vilela-symbol img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;transform:scale(1.28)}
+.symbol-wordmark{width:30px;height:30px}
+.symbol-tiny{width:17px;height:17px;margin:0 7px;padding:0!important}
+.symbol-sticker{width:24px;height:24px;margin-top:5px}
+.hero-sunburst{width:48px;height:48px;font-size:0;color:transparent}
+.vilela-symbol.hero-sunburst{position:absolute}
+.ticker-track .symbol-ticker{width:20px;height:20px}
+.about-stamp .symbol-stamp{width:22px;height:22px;margin:3px auto 0}
+.footer-mark .symbol-wordmark{width:30px;height:30px}
+.hero-hours .vilela-symbol img{padding:0}
+.photo-sticker .symbol-sticker{padding:0;margin-top:5px}
+.ticker-track .vilela-symbol{font-family:inherit;letter-spacing:normal}
 </style>
   <script type="application/ld+json">
   {
@@ -154,7 +169,7 @@ body.motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0)}
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header">
-    <a class="wordmark" href="#inicio" aria-label="Sorvetes Vilela, início"><span class="wordmark-mark" aria-hidden="true">✳</span><span>Sorvetes<br>Vilela</span></a>
+    <a class="wordmark" href="#inicio" aria-label="Sorvetes Vilela, início"><span class="vilela-symbol symbol-wordmark" aria-hidden="true"><img src="assets/vilela-favicon.png" alt=""></span><span>Sorvetes<br>Vilela</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu"><span></span><span></span></button>
     <nav class="nav-links" id="main-nav" aria-label="Navegação principal">
       <a href="#produtos">Destaques</a>
@@ -173,20 +188,20 @@ body.motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0)}
         <h1 id="hero-title">Uma pausa<br>que <em>derrete</em><br>o dia.</h1>
         <p class="hero-intro">Seu próximo sabor favorito está a uma colherada de distância.</p>
         <a class="button button-light" href="https://www.diggy.menu/sorvetesvilelaminacu" target="_blank" rel="noopener">Escolha no cardápio <span aria-hidden="true">↗</span></a>
-        <p class="hero-hours">Segunda a quarta e sexta a domingo · 11h às 23h <span aria-hidden="true">✳</span> Quinta fechada</p>
+        <p class="hero-hours">Segunda a quarta e sexta a domingo · 11h às 23h <span class="vilela-symbol symbol-tiny" aria-hidden="true"><img src="assets/vilela-favicon.png" alt=""></span> Quinta fechada</p>
       </div>
       <div class="hero-art" aria-label="Milk-shake tradicional da Sorvetes Vilela">
         <div class="hero-orbit" aria-hidden="true">feito pra sua pausa · feito pra sua pausa ·</div>
         <figure class="hero-photo parallax" data-speed="0.1">
             <img src="https://assets.diggy.menu/menu/69e258a83c2f82297834d9e1/products/2d0bf28e-fbfe-4a27-b91a-829c1bef5589-low.jpg" alt="Milk-shake tradicional de 300 ml do cardápio Vilela" fetchpriority="high" decoding="async" width="720" height="900">
         </figure>
-        <div class="photo-sticker" aria-hidden="true"><span>Uma<br>delícia<br>de pausa</span><b>✳</b></div>
+        <div class="photo-sticker" aria-hidden="true"><span>Uma<br>delícia<br>de pausa</span><span class="vilela-symbol symbol-sticker"><img src="assets/vilela-favicon.png" alt=""></span></div>
         <p class="photo-caption">Milk-shake tradicional <span>no cardápio Vilela</span></p>
       </div>
-      <span class="hero-sunburst" aria-hidden="true">✳</span>
+      <span class="vilela-symbol hero-sunburst" aria-hidden="true"><img src="assets/vilela-favicon.png" alt=""></span>
     </section>
 
-    <div class="ticker" aria-label="Sorvetes Vilela em Minaçu"><div class="ticker-track" aria-hidden="true"><span>Uma pausa gostosa</span><i>✳</i><span>Um sabor pra chamar de seu</span><i>✳</i><span>Uma pausa gostosa</span><i>✳</i><span>Um sabor pra chamar de seu</span><i>✳</i></div></div>
+    <div class="ticker" aria-label="Sorvetes Vilela em Minaçu"><div class="ticker-track" aria-hidden="true"><span>Uma pausa gostosa</span><span class="vilela-symbol symbol-ticker"><img src="assets/vilela-favicon.png" alt=""></span><span>Um sabor pra chamar de seu</span><span class="vilela-symbol symbol-ticker"><img src="assets/vilela-favicon.png" alt=""></span><span>Uma pausa gostosa</span><span class="vilela-symbol symbol-ticker"><img src="assets/vilela-favicon.png" alt=""></span><span>Um sabor pra chamar de seu</span><span class="vilela-symbol symbol-ticker"><img src="assets/vilela-favicon.png" alt=""></span></div></div>
 
     <section class="menu-section section-pad" id="produtos" aria-labelledby="menu-title">
       <div class="section-heading" data-reveal>
@@ -283,7 +298,7 @@ body.motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0)}
       <div class="about-collage" aria-label="Produtos do cardápio Vilela">
         <figure class="about-photo about-photo-main" data-reveal><img src="assets/catalog/dois-amores.jpg" alt="Sobremesa Dois Amores do catálogo" loading="lazy" decoding="async" width="300" height="300"></figure>
         <figure class="about-photo about-photo-inset" data-reveal><img src="assets/catalog/milkshake-tradicional.jpg" alt="Milk-shake Tradicional Vilela" loading="lazy" decoding="async" width="300" height="300"></figure>
-        <span class="about-stamp" aria-hidden="true">Minaçu<br>Goiás<br>✳</span>
+        <span class="about-stamp" aria-hidden="true">Minaçu<br>Goiás<br><span class="vilela-symbol symbol-stamp"><img src="assets/vilela-favicon.png" alt=""></span></span>
       </div>
     </section>
 
@@ -313,7 +328,7 @@ body.motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0)}
   </main>
 
   <footer class="site-footer">
-    <a class="wordmark footer-mark" href="#inicio"><span class="wordmark-mark" aria-hidden="true">✳</span><span>Sorvetes<br>Vilela</span></a>
+    <a class="wordmark footer-mark" href="#inicio" aria-label="Sorvetes Vilela, início"><span class="vilela-symbol symbol-wordmark" aria-hidden="true"><img src="assets/vilela-favicon.png" alt=""></span><span>Sorvetes<br>Vilela</span></a>
     <p>Minaçu — Goiás</p>
     <a href="#inicio" class="back-top">Voltar ao início ↑</a>
     <small>© <span id="year">2026</span> Sorvetes Vilela</small>
